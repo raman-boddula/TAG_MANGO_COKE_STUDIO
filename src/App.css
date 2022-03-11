@@ -13,6 +13,44 @@
   }
 }
 
+.prod img {
+  width: 450px;
+  height: 300px;
+}
+
+.prod {
+  padding: 2em;
+}
+
+.btns>*:hover {
+  transform: scale(1.2);
+  transition: transform 1.2s;
+  cursor: pointer;
+}
+
+.myPlayer {
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+  align-items: center;
+  background-color: #1A374D;
+  color: white;
+}
+
+.myPlayer img {
+  width: 100px;
+  height: 80px;
+}
+
+.prod img:hover {
+  transform: scale(1.02);
+  transition: transform 1.2s;
+  cursor: pointer;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -32,6 +70,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
