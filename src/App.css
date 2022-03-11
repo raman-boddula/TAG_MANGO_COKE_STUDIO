@@ -45,8 +45,16 @@
   height: 80px;
 }
 
+.prod {
+  text-align: left;
+}
+
+.details {
+  width: 81.4%;
+}
+
 .prod img:hover {
-  transform: scale(1.02);
+  transform: scale(1.05);
   transition: transform 1.2s;
   cursor: pointer;
 }
