@@ -4,20 +4,20 @@
 
 ### Dashboard :
 #### As soon as you enter our webpage ,you can see the dashboard with set of songs and few funtionality where you can filter the songs accordingly.
-![]()
+![](https://raw.githubusercontent.com/raman-boddula/TAG_MANGO_COKE_STUDIO/master/public/DashBoard.png)
 
 ### GridView :
-![]()
+![](https://raw.githubusercontent.com/raman-boddula/TAG_MANGO_COKE_STUDIO/master/public/GridView.png)
 ### ListView :
-![]()
+![](https://raw.githubusercontent.com/raman-boddula/TAG_MANGO_COKE_STUDIO/master/public/ListView.png)
 ### SortBy A to Z :
-![]()
+![](https://raw.githubusercontent.com/raman-boddula/TAG_MANGO_COKE_STUDIO/master/public/SortByAtoZ.png)
 ### SortBy Z to A :
-![]()
+![](https://raw.githubusercontent.com/raman-boddula/TAG_MANGO_COKE_STUDIO/master/public/SortByZtoA.png)
 ### Song Player :
-![]()
+![](https://raw.githubusercontent.com/raman-boddula/TAG_MANGO_COKE_STUDIO/master/public/SongPlaying.png)
 ### Next Song / PreviousSong :
-![]()
+![](https://raw.githubusercontent.com/raman-boddula/TAG_MANGO_COKE_STUDIO/master/public/NextSong.png)
 
 
 ## Tech Stack Used :
@@ -25,11 +25,12 @@
 - ReactJS
 - Ant Design
 - NPM Packages
-- API(https://s3-ap-southeast-1.amazonaws.com/he-public-data/studiod9c0baf.json)
+- [API](https://s3-ap-southeast-1.amazonaws.com/he-public-data/studiod9c0baf.json)
 
 ## Deployed Link :
-View(https://tag-mango-coke-studio-raman-boddula.vercel.app)
+[View](https://tag-mango-coke-studio-raman-boddula.vercel.app)
 
+# Thank You
 
 
 
