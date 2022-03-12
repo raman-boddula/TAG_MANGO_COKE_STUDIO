@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import {BsPlayCircleFill,BsPauseCircle} from 'react-icons/bs'
+import {BsFillGridFill,BsListUl,BsPlayCircleFill,BsPauseCircle} from 'react-icons/bs'
 import { BiSkipNext, BiSkipPrevious } from 'react-icons/bi';
+
 import { Select } from 'antd';
 
 export const Songs = () => {
@@ -9,6 +10,7 @@ export const Songs = () => {
     const [curr, setCurr] = React.useState({});
     const [showPlayer, setShowPlayer] = React.useState(false);
     const audioPlayer = React.useRef();
+    const [gridView, setGridView] = React.useState(true);
     const { Option } = Select;
     React.useEffect(() => {
         axios.get('https://s3-ap-southeast-1.amazonaws.com/he-public-data/studiod9c0baf.json').then((response) => {
@@ -32,22 +34,41 @@ export const Songs = () => {
     }
     return (
         <>
+            <div style={{display: 'flex',justifyContent: 'space-between',padding:"3em"}}>
+
             <h1> CokeStudio Songs </h1>
-            <Select style={{width:"10em"}} placeholder="sort by alphabetically" onChange={(value)=>handleFilter(value)}>
+                <div style={{marginRight:'5em',fontSize:'3em'}}>
+                    <BsFillGridFill style={{color:gridView ? "#2FA4FF":"black"}} onClick={() => setGridView(true)}/>
+                    &nbsp;<BsListUl style={{color:!gridView ? "#2FA4FF":"black"}} onClick={() => setGridView(false)}/>
+                </div>
+            </div>
+            <Select style={{width:"10em",marginBottom:'1em'}} placeholder="sort by alphabetically" onChange={(value)=>handleFilter(value)}>
                 <Option value='AtoZ'>A to Z</Option>
                 <Option value='ZtoA'>Z to A</Option>
             </Select>
-            <div  style={{display:'grid',gridTemplateColumns:'repeat(3,32%)',gridGap:'1%'}}>
+            {gridView ? <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,32%)', gridGap: '1%' }}>
                 {songs.map((el) => {
-                    return (<div className="prod" onClick={()=>handlePlay(el)}>
+                    return (<div className="prod" onClick={() => handlePlay(el)}>
                         <img src={el.cover_image} alt={el.song} />
                         <div className="details">
-                        <h2>{el.song}</h2>
-                        <p>{el.artists}</p>
-                       </div>
+                            <h2>{el.song}</h2>
+                            <p>{el.artists}</p>
+                        </div>
                     </div>)
-                }) }
-            </div>
+                })}
+            </div> : <div style={{display:"flex",flexDirection: "column"}}>
+            
+                    {songs.map((el) => {
+                    return (<div className="listView" onClick={() => handlePlay(el)}>
+                        <img src={el.cover_image} alt={el.song} />
+                        <div className="listViewDetails">
+                            <h2>{el.song}</h2>
+                            <p>{el.artists}</p>
+                        </div>
+                    </div>)
+                })}
+
+            </div>}
             <br />
            { showPlayer?<div className="myPlayer">
                 <div> <img src={curr.cover_image} alt={curr.song} /> </div>

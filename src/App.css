@@ -45,6 +45,25 @@
   height: 80px;
 }
 
+.listView {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1em 20em;
+  align-items: center;
+  box-shadow: 1px 1px 2px 2px rgb(18, 66, 66);
+}
+
+.listView:hover {
+  transform: scale(1.02);
+  transition: transform 1.2s;
+}
+
+.listView img {
+  width: 150px;
+  height: 100px
+}
+
 .prod {
   text-align: left;
 }
