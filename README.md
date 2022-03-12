@@ -1,8 +1,51 @@
-# Getting Started with Create React App
+## Getting Started with CokeStudio Online Songs Studio :
+#### Cokestudio is online portal for listening online songs.
+### Glimpse of CokeStudio 
+
+### Dashboard :
+#### As soon as you enter our webpage ,you can see the dashboard with set of songs and few funtionality where you can filter the songs accordingly.
+![]()
+
+### GridView :
+![]()
+### ListView :
+![]()
+### SortBy A to Z :
+![]()
+### SortBy Z to A :
+![]()
+### Song Player :
+![]()
+### Next Song / PreviousSong :
+![]()
+
+
+## Tech Stack Used :
+- Javascript
+- ReactJS
+- Ant Design
+- NPM Packages
+- API(https://s3-ap-southeast-1.amazonaws.com/he-public-data/studiod9c0baf.json)
+
+## Deployed Link :
+View(https://tag-mango-coke-studio-raman-boddula.vercel.app)
+
+
+
+
+
+
+
+
+
+
+
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
