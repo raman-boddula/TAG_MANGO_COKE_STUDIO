@@ -29,19 +29,24 @@ export const Songs = () => {
     const handleFilter = (value) => {
         console.log(value)
         let result=value === 'AtoZ' ? songs.sort((a, b) => a.song.localeCompare(b.song)) : songs.sort((a, b) => b.song.localeCompare(a.song));
-        setSongs(result)
+        setSongs([...result])
+        console.log(songs)
         
     }
     return (
         <>
-            <div style={{display: 'flex',justifyContent: 'space-between',padding:"3em"}}>
+            <div className="logoStyle" style={{display: 'flex',justifyContent: 'space-between',padding:"2em"}}>
 
-            <h1> CokeStudio Songs </h1>
-                <div style={{marginRight:'5em',fontSize:'3em'}}>
+                <div >
+                    <img  width="70px" style={{borderRadius:"50%"}}   src="https://yt3.ggpht.com/ytc/AKedOLTNtHgVmX114S4cnjoyFaDDJE6N1zNBwKgRNnYNAg=s900-c-k-c0x00ffffff-no-rj" alt='logo'/>
+            </div>
+                <div style={{marginRight:'5em',fontSize:'3em',cursor:"pointer"}}>
                     <BsFillGridFill style={{color:gridView ? "#2FA4FF":"black"}} onClick={() => setGridView(true)}/>
                     &nbsp;<BsListUl style={{color:!gridView ? "#2FA4FF":"black"}} onClick={() => setGridView(false)}/>
                 </div>
             </div>
+            {gridView?<h2  style={{fontWeight:"bolder"}}>GridView</h2>:<h2 style={{fontWeight:"bolder"}}>ListView</h2>}
+            <h5>Sort By Alphabetically</h5>
             <Select style={{width:"10em",marginBottom:'1em'}} placeholder="sort by alphabetically" onChange={(value)=>handleFilter(value)}>
                 <Option value='AtoZ'>A to Z</Option>
                 <Option value='ZtoA'>Z to A</Option>
@@ -77,8 +82,8 @@ export const Songs = () => {
                     <div> {curr.artists} </div>
                 </div> 
                    <div><img style={{borderRadius:'20%'}} src="https://i.gifer.com/origin/55/554818561cbf36d813ef2010cc9d66cc.gif" alt='musicGif'/></div> 
-                <audio ref={audioPlayer}>
-                    <source src={curr.url}></source>
+                <audio ref={audioPlayer} autoPlay>
+                    <source src={curr.url} ></source>
                 </audio>
                 <div className="btns">
                     <BiSkipPrevious onClick={
